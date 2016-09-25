@@ -1,0 +1,11 @@
+{
+  "name": "cosaas-ci",
+  "description": "",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::958395201336:role/cosaas_lambda_function",
+  "environment": {
+    "AWS_S3_BUCKET": "cosaas",
+    "AWS_S3_KEY_PREFIX": "ci/emails/"
+  }
+}
