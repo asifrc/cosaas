@@ -1,5 +1,9 @@
-#CoSaaS
+# CoSaaS
 
-Confirm Things.
+[![Build
+Status](https://snap-ci.com/asifrc/cosaas/branch/master/build_image)](https://snap-ci.com/asifrc/cosaas/branch/master)
 
-[Story Wall](https://github.com/asifrc/cosaas/projects/1)
+_Confirm Things._
+
+- [Story Wall](https://github.com/asifrc/cosaas/projects/1)
+- [Pipeline](https://snap-ci.com/asifrc/cosaas/branch/master)
