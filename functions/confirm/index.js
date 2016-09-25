@@ -4,6 +4,9 @@ var s3 = new AWS.S3();
 var bucketName = process.env['AWS_S3_BUCKET'] || "cosaaslocal";
 var keyPrefix = process.env['AWS_S3_KEY_PREFIX'] || "";
 
+var parsers = require('./mailParser');
+var mailParser = new parsers.HParser(s3, bucketName, keyPrefix);
+
 exports.handler = function(event, context, callback) {
   console.log('Process email');
   console.log('event', JSON.stringify(event,null,2));
@@ -12,26 +15,9 @@ exports.handler = function(event, context, callback) {
     callback("Not SES");
   }
   else {
-    console.log('event', event);
     var sesNotification = event.Records[0].ses;
-    console.log("SES Notification:\n", JSON.stringify(sesNotification, null, 2));
-    console.log("ObjectKEY", keyPrefix + sesNotification.mail.messageId);
-
-    // Retrieve the email from your bucket
-    s3.getObject({
-      Bucket: bucketName,
-      Key: keyPrefix + sesNotification.mail.messageId
-    }, function(err, data) {
-      if (err) {
-        console.log(err, err.stack);
-        callback(err);
-      } else {
-        console.log("Raw email:\n" + data.Body);
-
-        // Custom email processing goes here
-
-        callback(null, null);
-      }
+    mailParser.parse(sesNotification, function(err, data) {
+      console.log("Parsing Complete:", err, data);
     });
   }
 };
