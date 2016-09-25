@@ -1,8 +1,13 @@
 var should = require('should');
 
-describe("Hello", function() {
-  it("should say world", function() {
-    var str = "world";
-    str.should.eql("world");
+var Confirm = require('../confirm').Confirm;
+
+
+describe("Confirm", function() {
+  describe("handler", function() {
+    it("should call third param as a callback", function(done) {
+      var confirm = new Confirm();
+      confirm.handler(null,null,done);
+    });
   });
 });
