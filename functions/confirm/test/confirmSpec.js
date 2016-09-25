@@ -1,12 +1,14 @@
 var should = require('should');
+var fs = require('fs');
 
 var Confirm = require('../confirm').Confirm;
 
 var sampleEvent = require('./resources/sampleEvent.json');
-
 var validEvent = function() {
   return JSON.parse(JSON.stringify(sampleEvent));
 }
+
+var sampleEmail = fs.readFileSync('./test/resources/f98eu6veuoljlnf22ckrnsd5jlu1fu4ai2eguc81', 'utf8');
 
 var mock = function(obj, methodName, cb) {
   cb = cb || new Function();
@@ -166,6 +168,22 @@ describe("Confirm", function() {
 
       confirm.handler(event, null, function(err, data) {
         confirm.parseEmail.args[0].Body.should.equal("Raw email body");
+        done();
+      });
+    });
+  });
+
+  describe("parseEmail", function() {
+    it("should should find the confirmation link", function(done) {
+      var confirm = new Confirm(stubbedS3);
+      var expectedUrl = "https://id.examplsaas.com/account/accept/4151043/989c99bbb0c6fca350b06f7f29c438cc";
+
+      var sampleData = {
+        "Body": sampleEmail
+      };
+
+      confirm.parseEmail(sampleData, function(err, data) {
+        data.should.equal(expectedUrl);
         done();
       });
     });

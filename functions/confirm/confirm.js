@@ -1,6 +1,8 @@
+var cheerio = require('cheerio');
+var MailParser = require('mailparser').MailParser;
+
 var Confirm = function(s3, env) {
   var self = this;
-
   env = env || process.env;
 
   var sesRecords = function(e) {
@@ -33,7 +35,19 @@ var Confirm = function(s3, env) {
   };
 
   self.parseEmail = function(data, cb) {
-    cb(null, null);
+    var mailparser = new MailParser();
+    mailparser.on('end', function(email) {
+      var html = email.html || ""
+      var links = cheerio.load(html)('a').toArray();
+      var url = links.map(function(link) {
+        return link.attribs.href;
+      }).filter(function(href) {
+        return /id.*accept/.test(href);
+      }).shift();
+      cb(null, url);
+    });
+    mailparser.write(data.Body);
+    mailparser.end();
   };
 
   return self;
