@@ -100,7 +100,7 @@ describe("Confirm", function() {
       var env = {
         "AWS_S3_BUCKET": "testbucket"
       };
-      var confirm = new Confirm(s3,env);
+      var confirm = new Confirm(s3, env);
       var event = validEvent();
 
       mock(s3,'getObject', s3getObjectStub);
@@ -118,7 +118,7 @@ describe("Confirm", function() {
       var env = {
         "AWS_S3_KEY_PREFIX": "prefix/"
       };
-      var confirm = new Confirm(s3,env);
+      var confirm = new Confirm(s3, env);
       var event = validEvent();
       event.Records[0].ses.mail.messageId = "testMessageId";
 
@@ -136,7 +136,7 @@ describe("Confirm", function() {
       var env = {
         "AWS_S3_BUCKET": "testbucket"
       };
-      var confirm = new Confirm(s3,env);
+      var confirm = new Confirm(s3, env);
       var event = validEvent();
 
       mock(s3,'getObject', function(params, cb) {
