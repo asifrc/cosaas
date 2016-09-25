@@ -1,3 +1,3 @@
 #/bin/bash
 
-cat ./functions/confirm/test/sampleEvent.json | apex invoke confirm
+cat ./functions/confirm/test/resources/sampleEvent.json | apex invoke confirm
