@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 TEST_ENV=""
 if [[ -n "$CI" ]]; then
   TEST_ENV="--env ci"
