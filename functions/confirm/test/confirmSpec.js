@@ -107,8 +107,7 @@ describe("Confirm", function() {
 
 
       confirm.handler(event, null, function(err, data) {
-        s3.getObject.called.should.equal(true);
-        s3.getObject.args[0].Bucket.should.equal(env['AWS_S3_BUCKET']);
+        s3.getObject.args[0].Bucket.should.equal('testbucket');
         done();
       });
     });
@@ -144,7 +143,29 @@ describe("Confirm", function() {
       });
 
       confirm.handler(event, null, function(err, data) {
-        err.error.should.eql("S3 Error");
+        err.error.should.equal("S3 Error");
+        done();
+      });
+    });
+
+    it("should pass the email into a parser after getting it from s3", function(done) {
+      var s3 = {};
+      var env = {};
+      var confirm = new Confirm(s3, env);
+      var event = validEvent();
+
+      var rawEmail = "Raw email body";
+
+      mock(s3,'getObject', function(params, cb) {
+        cb(null, {"Body": rawEmail});
+      });
+
+      mock(confirm, "parseEmail", function(data, cb) {
+        cb(null, data);
+      });
+
+      confirm.handler(event, null, function(err, data) {
+        confirm.parseEmail.args[0].Body.should.equal("Raw email body");
         done();
       });
     });

@@ -26,11 +26,16 @@ var Confirm = function(s3, env) {
           callback(err);
         }
         else {
-          callback();
+          self.parseEmail(data, callback);
         }
       });
     }
   };
+
+  self.parseEmail = function(data, cb) {
+    cb(null, null);
+  };
+
   return self;
 };
 
