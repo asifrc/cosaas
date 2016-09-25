@@ -1,0 +1,158 @@
+Return-Path: <bounces@examplsaas.com>
+Received: from m71-92.mailgun.net (m71-92.mailgun.net [166.78.71.92])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id f98eu6veuoljlnf22ckrnsd5jlu1fu4ai2eguc81
+ for newuser@examplsaas.com;
+ Sun, 25 Sep 2016 09:42:02 +0000 (UTC)
+Received-SPF: pass (spfCheck: domain of examplsaas.com designates 166.78.71.92 as permitted sender) client-ip=166.78.71.92; envelope-from=bounces@examplsaas.com; helo=m71-92.mailgun.net;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of examplsaas.com designates 166.78.71.92 as permitted sender) client-ip=166.78.71.92; envelope-from=bounces@examplsaas.com; helo=m71-92.mailgun.net;
+ dkim=pass header.i=@examplsaas.com;
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=examplsaas.com; q=dns/txt; s=mx;
+ t=1474796521; h=Content-Transfer-Encoding: Content-Type: Mime-Version:
+ Subject: Message-ID: To: From: Date;
+ bh=zTz6rF2aMcCQN9fRtOhTlzgxIJicwvhVVC5FAGgjmHw=; b=t5d/v5EQASHp46wBXq2YWkDKsrhZU+WBjRgI/MW9w5WjJeC4BxAmwmga5a1FldStS0a2ajxM
+ ey/qf+B86lwZhp8lwOmHh7ObVZ4JZoYWXgvruVTYEunHeIcJimOzxttVI66aLgni20o/2M57
+ Q97cuBZ5V70nsAfz401J8cgfRHU=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=examplsaas.com; s=mx; q=dns;
+ h=Date: From: To: Message-ID: Subject: Mime-Version: Content-Type:
+ Content-Transfer-Encoding;
+ b=fCldyKS3qC4oI/FZjJdHkJW3sHbixIoFJFzc8wW0ezb6gx2TpxKJLeBaSWIwZT3BFRaSNW
+ HuX/orhU4PAfxSZdNIqiu9pfbD2/JI8MR084UttqrFV3yZ6t9XmFICuson46kvVm7tSZqN+X
+ wKwquD96KUyOBVz+m0Ila95mwebQw=
+X-Mailgun-Sending-Ip: 166.78.71.92
+X-Mailgun-Sid: WyI4MWVkOSIsICJyZWFsaGVyb2luZUBhdXRvY29uZmlybWVtYWlsdGVzdC5sb2x3dXQud3RmIiwgIjcyNmUiXQ==
+Received: from examplsaas.com (ec2-54-80-103-146.compute-1.amazonaws.com [54.80.103.146])
+ by mxa.mailgun.org with ESMTP id 57e79be9.7fb34e8a7f00-in01;
+ Sun, 25 Sep 2016 09:42:01 -0000 (UTC)
+Return-Path: <bounces@examplsaas.com>
+Date: Sun, 25 Sep 2016 02:42:01 -0700
+From: Example SaaS <noreply@examplsaas.com>
+To: newuser@examplsaas.com
+Message-ID: <57e79be93067b_12d8e3fb078c5d380399fd@ip-10-150-56-17.mail>
+Subject: Confirm your account on Example SaaS
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57e79be92fbf4_12d8e3fb078c5d38039827";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Mailgun-Native-Send: true
+
+
+----==_mimepart_57e79be92fbf4_12d8e3fb078c5d38039827
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Thanks for signing up with Example SaaS! You must follow this link to activate your account:
+
+https://id.examplsaas.com/account/accept/4151043/989c99bbb0c6fca350b06f7f29c438cc
+Have fun, and don't hesitate to contact us with your feedback.
+
+- The Example SaaS Team
+http://examplsaas.com/
+
+Example SaaS is the cloud platform for rapid deployment and scaling of web applications.
+Get up and running in minutes, then deploy instantly via Git.
+
+To learn more about Example SaaS and all its features, check out the Dev Center:
+http://devcenter.examplsaas.com/articles/quickstar
+
+----==_mimepart_57e79be92fbf4_12d8e3fb078c5d38039827
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body style="width: 100% !important; -webkit-text-size-adjust: none; margin: 0; padding: 0;">
+    <center>
+      <table id="backgroundTable" style="border-spacing: 0; border-collapse: collapse; font-family: proxima-nova, 'helvetica neue', helvetica, arial, geneva, sans-serif; height: 100% !important; width: 100% !important; color: #4c4c4c; font-size: 15px; line-height: 150%; background: #ffffff; margin: 0; padding: 0; border: 0;">
+        <tr style="vertical-align: top; padding: 0;">
+          <td align="center" valign="top" style="vertical-align: top; padding: 0;">
+            <table id="templateContainer" style="border-spacing: 0; border-collapse: collapse; font-family: proxima-nova, 'helvetica neue', helvetica, arial, geneva, sans-serif; height: 100%; width: 600px; color: #4c4c4c; font-size: 15px; line-height: 150%; background: #ffffff; margin: 40px 0; padding: 0; border: 0;">
+              <tr style="vertical-align: top; padding: 0;">
+                <td class="templateContainerPadding" align="center" valign="top" style="vertical-align: top; padding: 0 40px;">
+                  <table id="templateContent" style="border-spacing: 0; border-collapse: collapse; font-family: proxima-nova, 'helvetica neue', helvetica, arial, geneva, sans-serif; height: 100%; width: 100%; background: #ffffff; margin: 0; padding: 0; border: 0;">
+                    <tr style="vertical-align: top; padding: 0;">
+                      <td style="vertical-align: top; text-align: left; padding: 0;" align="left" valign="top">
+                        <h1 id="logo" style="color: #6E5BAA; display: block; font-family: hybrea, proxima-nova, 'helvetica neue', helvetica, arial, geneva, sans-serif; font-size: 32px; font-weight: 200; text-align: left; margin: 0 0 40px;" align="left"><img src="https://newsletter.static.examplsaas.com/examplsaas-logo.png" alt="examplsaas" width="120" height="42" style="outline: none; text-decoration: none; border: 0;" /></h1>
+
+                        <p style="margin: 20px 0;">Thanks for signing up with Example SaaS! You must follow this link to activate your account:</p>
+
+<p style="margin: 20px 0;"><a href="https://id.examplsaas.com/account/accept/4151043/989c99bbb0c6fca350b06f7f29c438cc" style="color: #6E5BAA;">https://id.examplsaas.com/account/accept/4151043/989c99bbb0c6fca350b06f7f29c438cc</a>
+
+<p style="margin: 20px 0;">Have fun, and don't hesitate to contact us with your feedback.</p>
+
+                        <p style="margin: 20px 0;">
+                          The Example SaaS Team<br />
+                          <a href="https://examplsaas.com" style="color: #6E5BAA;">https://examplsaas.com</a>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr style="vertical-align: top; padding: 0;">
+                <td class="templateContainerPadding" align="center" valign="top" style="vertical-align: top; padding: 0 40px;">
+                  <table id="footerContent" style="border-spacing: 0; border-collapse: collapse; font-family: proxima-nova, 'helvetica neue', helvetica, arial, geneva, sans-serif; height: 100%; width: 100%; border-top-style: solid; border-top-color: #ebeaef; color: #999999; font-size: 12px; background: #ffffff; margin: 0; padding: 0; border-width: 1px 0 0;">
+                    <tr style="vertical-align: top; padding: 0;">
+                      <td valign="top" style="vertical-align: top; text-align: left; padding: 0;" align="left">
+                        <p style="margin: 20px 0;">
+                          Example SaaS is the cloud platform for rapid deployment and scaling of web applications. Get up and running in minutes, then deploy instantly via Git.
+                        </p>
+
+                        <p style="margin: 20px 0;">
+                          To learn more about Example SaaS and all its features, check out the Dev Center: <a href="https://devcenter.examplsaas.com/articles/quickstart" style="color: #666666;">https://devcenter.examplsaas.com/articles/quickstart</a>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+<style type="text/css">
+body {
+width: 100% !important;
+}
+.ReadMsgBody {
+width: 100%;
+}
+.ExternalClass {
+width: 100%;
+}
+body {
+-webkit-text-size-adjust: none;
+}
+body {
+margin: 0; padding: 0;
+}
+img {
+border: 0; outline: none; text-decoration: none;
+}
+#backgroundTable {
+height: 100% !important; margin: 0; padding: 0; width: 100% !important;
+}
+#backgroundTable {
+color: #4c4c4c; background-color: #ffffff; font-family: proxima-nova, 'helvetica neue', helvetica, arial, geneva, sans-serif; font-size: 15px; line-height: 150%;
+}
+@media (max-width: 540px) {
+  #templateContainer {
+    width: 100% !important;
+  }
+  #templateContainer .templateContainerPadding {
+    padding: 0 5% !important;
+  }
+}
+</style>
+</body>
+</html>
+
+----==_mimepart_57e79be92fbf4_12d8e3fb078c5d38039827--
