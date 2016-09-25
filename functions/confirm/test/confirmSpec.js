@@ -47,7 +47,7 @@ describe("Confirm", function() {
       var event = {}
 
       confirm.handler(event, null, function(err, data) {
-        err.error.should.eql("No SES Event Records");
+        err.error.should.equal("No SES Event Records");
         done();
       });
     });
@@ -59,7 +59,7 @@ describe("Confirm", function() {
       };
 
       confirm.handler(event, null, function(err, data) {
-        err.error.should.eql("No SES Event Records");
+        err.error.should.equal("No SES Event Records");
         done();
       });
     });
@@ -80,7 +80,7 @@ describe("Confirm", function() {
       };
 
       confirm.handler(event, null, function(err, data) {
-        err.error.should.eql("No SES Event Records");
+        err.error.should.equal("No SES Event Records");
         done();
       });
     });
@@ -107,8 +107,8 @@ describe("Confirm", function() {
 
 
       confirm.handler(event, null, function(err, data) {
-        s3.getObject.called.should.eql(true);
-        s3.getObject.args[0].Bucket.should.eql(env['AWS_S3_BUCKET']);
+        s3.getObject.called.should.equal(true);
+        s3.getObject.args[0].Bucket.should.equal(env['AWS_S3_BUCKET']);
         done();
       });
     });
@@ -126,7 +126,7 @@ describe("Confirm", function() {
 
 
       confirm.handler(event, null, function(err, data) {
-        s3.getObject.args[0].Key.should.eql("prefix/testMessageId");
+        s3.getObject.args[0].Key.should.equal("prefix/testMessageId");
         done();
       });
     });
