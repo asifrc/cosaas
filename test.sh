@@ -13,6 +13,9 @@ fi
 function unitTests {
   echo "Running Unit Tests..."
   pushd ./functions/confirm
+  if [[ -n "$CI" ]]; then
+    npm install
+  fi
   npm test
   popd
 }
